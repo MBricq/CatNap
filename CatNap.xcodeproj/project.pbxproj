@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C357E5F20383CAE0079617E /* CatCurls.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C357E5E20383CAE0079617E /* CatCurls.sks */; };
+		9C357E6120383D430079617E /* CatWakeUp.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C357E6020383D430079617E /* CatWakeUp.sks */; };
 		9CD7586520376406008EF045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7586420376406008EF045 /* AppDelegate.swift */; };
 		9CD7586720376406008EF045 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7586620376406008EF045 /* GameScene.sks */; };
 		9CD7586920376406008EF045 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7586820376406008EF045 /* Actions.sks */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C357E5E20383CAE0079617E /* CatCurls.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatCurls.sks; sourceTree = "<group>"; };
+		9C357E6020383D430079617E /* CatWakeUp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatWakeUp.sks; sourceTree = "<group>"; };
 		9CD7586120376406008EF045 /* CatNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD7586420376406008EF045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD7586620376406008EF045 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				9CD7586620376406008EF045 /* GameScene.sks */,
 				9CD7588820382B3C008EF045 /* Cat.sks */,
 				9CD7586820376406008EF045 /* Actions.sks */,
+				9C357E5E20383CAE0079617E /* CatCurls.sks */,
+				9C357E6020383D430079617E /* CatWakeUp.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 				9CD7586720376406008EF045 /* GameScene.sks in Resources */,
 				9CD758852038260B008EF045 /* lose.mp3 in Resources */,
 				9CD7587220376406008EF045 /* Assets.xcassets in Resources */,
+				9C357E6120383D430079617E /* CatWakeUp.sks in Resources */,
+				9C357E5F20383CAE0079617E /* CatCurls.sks in Resources */,
 				9CD758842038260B008EF045 /* win.mp3 in Resources */,
 				9CD7587520376406008EF045 /* LaunchScreen.storyboard in Resources */,
 				9CD758822038260B008EF045 /* mrreow.mp3 in Resources */,
