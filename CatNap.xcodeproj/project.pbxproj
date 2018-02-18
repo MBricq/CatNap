@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9C357E5F20383CAE0079617E /* CatCurls.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C357E5E20383CAE0079617E /* CatCurls.sks */; };
 		9C357E6120383D430079617E /* CatWakeUp.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C357E6020383D430079617E /* CatWakeUp.sks */; };
+		9C357E632039E9260079617E /* BedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357E622039E9260079617E /* BedNode.swift */; };
+		9C357E652039EDCE0079617E /* CatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357E642039EDCE0079617E /* CatNode.swift */; };
 		9CD7586520376406008EF045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7586420376406008EF045 /* AppDelegate.swift */; };
 		9CD7586720376406008EF045 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7586620376406008EF045 /* GameScene.sks */; };
 		9CD7586920376406008EF045 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7586820376406008EF045 /* Actions.sks */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		9C357E5E20383CAE0079617E /* CatCurls.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatCurls.sks; sourceTree = "<group>"; };
 		9C357E6020383D430079617E /* CatWakeUp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatWakeUp.sks; sourceTree = "<group>"; };
+		9C357E622039E9260079617E /* BedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedNode.swift; sourceTree = "<group>"; };
+		9C357E642039EDCE0079617E /* CatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNode.swift; sourceTree = "<group>"; };
 		9CD7586120376406008EF045 /* CatNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD7586420376406008EF045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD7586620376406008EF045 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C357E662039EE8B0079617E /* Custom Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				9C357E642039EDCE0079617E /* CatNode.swift */,
+				9C357E622039E9260079617E /* BedNode.swift */,
+			);
+			path = "Custom Nodes";
+			sourceTree = "<group>";
+		};
 		9CD7585820376406008EF045 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +89,7 @@
 		9CD7586320376406008EF045 /* CatNap */ = {
 			isa = PBXGroup;
 			children = (
+				9C357E662039EE8B0079617E /* Custom Nodes */,
 				9CD7588720382AE1008EF045 /* Scenes */,
 				9CD7587C2038260A008EF045 /* Sounds */,
 				9CD7586420376406008EF045 /* AppDelegate.swift */,
@@ -196,6 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD7586B20376406008EF045 /* GameScene.swift in Sources */,
+				9C357E652039EDCE0079617E /* CatNode.swift in Sources */,
+				9C357E632039E9260079617E /* BedNode.swift in Sources */,
 				9CD7586D20376406008EF045 /* GameViewController.swift in Sources */,
 				9CD7586520376406008EF045 /* AppDelegate.swift in Sources */,
 			);
