@@ -35,8 +35,8 @@ class MessageNode: SKLabelNode {
     
     func didBounce() {
         bouncesCount += 1
-        if bouncesCount == 3 {
-            run(SKAction.removeFromParent())
+        if bouncesCount == 2 {
+            physicsBody?.collisionBitMask = PhysicsCategory.None
         }
     }
 }

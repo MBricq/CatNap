@@ -34,6 +34,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bedNode: BedNode!
     var catNode: CatNode!
     var isTheScenePlayable = true
+    var currentLevel: Int = 0
+    
+    // this function is a factory method, it allows it to be used as a constructor of a non existing class
+    class func level(levelNum: Int) -> GameScene? {
+        let scene = GameScene(fileNamed: "Level\(levelNum)")!
+        scene.currentLevel = levelNum
+        scene.scaleMode = .aspectFill
+        return scene
+    }
     
     override func didMove(to view: SKView) {
         
@@ -61,6 +70,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // play the music
         SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
+    }
+    
+    override func didSimulatePhysics() {
+        if isTheScenePlayable {
+            if abs(catNode.parent!.zRotation) > CGFloat(25).degreesToRadians() {
+                lose()
+            }
+        }
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -93,7 +110,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func newGame() {
-        let scene = GameScene(fileNamed: "GameScene")
+        let scene = GameScene.level(levelNum: currentLevel)
         scene?.scaleMode = scaleMode
         view?.presentScene(scene)
     }
@@ -108,7 +125,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         inGameMessage(text: "Nice!", color: UIColor.cyan)
         
-        run(SKAction.afterDelay(3, runBlock: newGame))
+        run(SKAction.afterDelay(4, runBlock: newGame))
     }
     
     func lose() {
