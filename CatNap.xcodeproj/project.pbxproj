@@ -39,6 +39,7 @@
 		9CD758862038260B008EF045 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9CD758812038260A008EF045 /* backgroundMusic.mp3 */; };
 		9CD7588920382B3C008EF045 /* Cat.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7588820382B3C008EF045 /* Cat.sks */; };
 		9CE3B221203B496800DB3302 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3B220203B496800DB3302 /* Level2.sks */; };
+		9CE3B223203B4B9800DB3302 /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B222203B4B9800DB3302 /* SpringNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		9CD758812038260A008EF045 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		9CD7588820382B3C008EF045 /* Cat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cat.sks; sourceTree = "<group>"; };
 		9CE3B220203B496800DB3302 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
+		9CE3B222203B4B9800DB3302 /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				9C357E622039E9260079617E /* BedNode.swift */,
 				9C329A46203A0A7C00904CE6 /* BlockNode.swift */,
 				9C329A48203A3A5D00904CE6 /* MessageNode.swift */,
+				9CE3B222203B4B9800DB3302 /* SpringNode.swift */,
 			);
 			path = "Custom Nodes";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				9C357E632039E9260079617E /* BedNode.swift in Sources */,
 				9C329A3C2039FD6000904CE6 /* Int+Extensions.swift in Sources */,
 				9CD7586D20376406008EF045 /* GameViewController.swift in Sources */,
+				9CE3B223203B4B9800DB3302 /* SpringNode.swift in Sources */,
 				9C329A452039FD6000904CE6 /* CGFloat+Extensions.swift in Sources */,
 				9C329A442039FD6000904CE6 /* Vector3.swift in Sources */,
 				9CD7586520376406008EF045 /* AppDelegate.swift in Sources */,

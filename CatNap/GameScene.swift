@@ -20,12 +20,13 @@ protocol InteractiveNode {
 }
 
 struct PhysicsCategory {
-    static let None: UInt32 = 0b0      // 0
-    static let Cat: UInt32 = 0b1       // 1
-    static let Block: UInt32 = 0b10    // 2
-    static let Bed: UInt32 = 0b100     // 4
-    static let Edge: UInt32 = 0b1000   // 8
-    static let Label: UInt32 = 0b10000 // 16
+    static let None: UInt32 = 0b0        // 0
+    static let Cat: UInt32 = 0b1         // 1
+    static let Block: UInt32 = 0b10      // 2
+    static let Bed: UInt32 = 0b100       // 4
+    static let Edge: UInt32 = 0b1000     // 8
+    static let Label: UInt32 = 0b10000   // 16
+    static let Spring: UInt32 = 0b100000 // 32
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -69,7 +70,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         catNode = childNode(withName: "//cat_body") as! CatNode
         
         // play the music
-        SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
+        //SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
     }
     
     override func didSimulatePhysics() {
