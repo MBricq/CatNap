@@ -93,7 +93,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func win() {
         isTheScenePlayable = false
         
-        catNode.curlAt(scenePoint: bedNode.position, onlyYChange: true)
+        catNode.curlAt(onlyToYOfPoint: bedNode.position)
         
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("win.mp3")

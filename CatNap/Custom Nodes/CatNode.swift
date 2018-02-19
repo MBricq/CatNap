@@ -38,7 +38,7 @@ class CatNode: SKSpriteNode, EventListenerNode {
         catAwake?.isPaused = false
     }
     
-    func curlAt(scenePoint: CGPoint, onlyYChange: Bool) {
+    private func curlAt(scenePoint: CGPoint, xChange: Bool, yChange: Bool) {
         parent?.physicsBody = nil
         for child in children {
             child.removeFromParent()
@@ -53,18 +53,35 @@ class CatNode: SKSpriteNode, EventListenerNode {
         var locationPoint = convert(scenePoint, from: scene!)
         locationPoint.y -= frame.size.height/3
         
-        if !onlyYChange {
+        if (xChange && yChange) {
             run(SKAction.group([SKAction.move(to: locationPoint, duration: 0.66),
                                 SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5)
                                 ])
             )
-        } else {
+        } else if (!xChange && yChange) {
             run(SKAction.group([SKAction.moveTo(y: locationPoint.y, duration: 0.66),
+                                SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5)
+                ])
+            )
+        } else if (xChange && !yChange) {
+            run(SKAction.group([SKAction.moveTo(x: locationPoint.x, duration: 0.66),
                                 SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5)
                 ])
             )
         }
         // this shouldn't be necessary but there is a bug with the current version of XCode
         catCurl?.isPaused = false
+    }
+    
+    func curlAt(scenePoint: CGPoint) {
+        curlAt(scenePoint: scenePoint, xChange: true, yChange: true)
+    }
+    
+    func curlAt(onlyToXOfPoint: CGPoint) {
+        curlAt(scenePoint: onlyToXOfPoint, xChange: true, yChange: false)
+    }
+    
+    func curlAt(onlyToYOfPoint: CGPoint) {
+        curlAt(scenePoint: onlyToYOfPoint, xChange: false, yChange: true)
     }
 }
