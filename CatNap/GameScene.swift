@@ -64,8 +64,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        if isTheScenePlayable {
-            let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        if collision == PhysicsCategory.Edge | PhysicsCategory.Label {
+            
+            // this is a test such as they are in C++ : it tests if the bodyA is the label, if it is then labelNode is equal to contact.bodyA.node, otherwise it is contact.bodyB.node
+            // eitherway the label is then casts as a MessageNode and it calls its function didBounce()
+            let labelNode = (contact.bodyA.categoryBitMask == PhysicsCategory.Label ? contact.bodyA.node : contact.bodyB.node) as! MessageNode
+            labelNode.didBounce()
+            
+        } else if isTheScenePlayable {
             
             if collision == PhysicsCategory.Cat | PhysicsCategory.Bed {
                 print("You win!")
