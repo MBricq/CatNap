@@ -35,6 +35,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // MARK : variables of the nodes
     var bedNode: BedNode!
     var catNode: CatNode!
+    var hookBaseNode: HookBaseNode?
     var isTheScenePlayable = true
     var currentLevel: Int = 0
     
@@ -69,14 +70,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bedNode = childNode(withName: "bed") as! BedNode
         // search "cat_body" through all the nodes of the scene and their children
         catNode = childNode(withName: "//cat_body") as! CatNode
+        hookBaseNode = childNode(withName: "hookBase") as? HookBaseNode
         
         // play the music
         //SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
     }
     
     override func didSimulatePhysics() {
-        if isTheScenePlayable {
-            if abs(catNode.parent!.zRotation) > CGFloat(25).degreesToRadians() {
+        if isTheScenePlayable && hookBaseNode?.isHooked == false {
+            if abs(catNode.parent!.zRotation) > CGFloat(45).degreesToRadians() {
                 lose()
             }
         }
@@ -97,10 +99,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if collision == PhysicsCategory.Cat | PhysicsCategory.Bed {
                 print("You win!")
                 win()
-                
             } else if collision == PhysicsCategory.Cat | PhysicsCategory.Edge {
                 print("FAIL!")
                 lose()
+            } else if collision == PhysicsCategory.Cat | PhysicsCategory.Hook && hookBaseNode?.isHooked == false {
+                hookBaseNode?.hookCat(catPhysicsBody: catNode.parent!.physicsBody!)
             }
         }
     }
