@@ -121,6 +121,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func win() {
+        
+        if currentLevel < 3 {
+            currentLevel += 1
+        }
+        
         isTheScenePlayable = false
         
         catNode.curlAt(onlyToYOfPoint: bedNode.position)
