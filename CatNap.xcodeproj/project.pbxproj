@@ -51,6 +51,7 @@
 		9CE3B237203F217100DB3302 /* PictureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B236203F217100DB3302 /* PictureNode.swift */; };
 		9CE3B239203F247900DB3302 /* LongWoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B238203F247900DB3302 /* LongWoodNode.swift */; };
 		9CE3B23B203F270D00DB3302 /* DiscoBallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B23A203F270D00DB3302 /* DiscoBallNode.swift */; };
+		9CE3B23D203F320700DB3302 /* HintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B23C203F320700DB3302 /* HintNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		9CE3B236203F217100DB3302 /* PictureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureNode.swift; sourceTree = "<group>"; };
 		9CE3B238203F247900DB3302 /* LongWoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongWoodNode.swift; sourceTree = "<group>"; };
 		9CE3B23A203F270D00DB3302 /* DiscoBallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoBallNode.swift; sourceTree = "<group>"; };
+		9CE3B23C203F320700DB3302 /* HintNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				9CE3B236203F217100DB3302 /* PictureNode.swift */,
 				9CE3B238203F247900DB3302 /* LongWoodNode.swift */,
 				9CE3B23A203F270D00DB3302 /* DiscoBallNode.swift */,
+				9CE3B23C203F320700DB3302 /* HintNode.swift */,
 			);
 			path = "Custom Nodes";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				9C329A3C2039FD6000904CE6 /* Int+Extensions.swift in Sources */,
 				9CD7586D20376406008EF045 /* GameViewController.swift in Sources */,
 				9CE3B225203B883B00DB3302 /* HookBaseNode.swift in Sources */,
+				9CE3B23D203F320700DB3302 /* HintNode.swift in Sources */,
 				9CE3B223203B4B9800DB3302 /* SpringNode.swift in Sources */,
 				9CE3B23B203F270D00DB3302 /* DiscoBallNode.swift in Sources */,
 				9C329A452039FD6000904CE6 /* CGFloat+Extensions.swift in Sources */,
