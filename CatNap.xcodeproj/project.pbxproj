@@ -44,6 +44,10 @@
 		9CE3B227203DE5A600DB3302 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3B226203DE5A600DB3302 /* Level2.sks */; };
 		9CE3B229203DE7BF00DB3302 /* StoneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B228203DE7BF00DB3302 /* StoneNode.swift */; };
 		9CE3B22D203DF01000DB3302 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3B22C203DF01000DB3302 /* Level4.sks */; };
+		9CE3B230203EE88400DB3302 /* disco-sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3B22E203EE88400DB3302 /* disco-sound.m4a */; };
+		9CE3B231203EE88400DB3302 /* discolights-loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3B22F203EE88400DB3302 /* discolights-loop.mov */; };
+		9CE3B234203EE8CD00DB3302 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3B232203EE8CD00DB3302 /* Level5.sks */; };
+		9CE3B235203EE8CD00DB3302 /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3B233203EE8CD00DB3302 /* Level6.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		9CE3B226203DE5A600DB3302 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		9CE3B228203DE7BF00DB3302 /* StoneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneNode.swift; sourceTree = "<group>"; };
 		9CE3B22C203DF01000DB3302 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
+		9CE3B22E203EE88400DB3302 /* disco-sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "disco-sound.m4a"; sourceTree = "<group>"; };
+		9CE3B22F203EE88400DB3302 /* discolights-loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "discolights-loop.mov"; sourceTree = "<group>"; };
+		9CE3B232203EE8CD00DB3302 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
+		9CE3B233203EE8CD00DB3302 /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +182,8 @@
 				9CD7587F2038260A008EF045 /* win.mp3 */,
 				9CD758802038260A008EF045 /* lose.mp3 */,
 				9CD758812038260A008EF045 /* backgroundMusic.mp3 */,
+				9CE3B22E203EE88400DB3302 /* disco-sound.m4a */,
+				9CE3B22F203EE88400DB3302 /* discolights-loop.mov */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -185,6 +195,8 @@
 				9CE3B226203DE5A600DB3302 /* Level2.sks */,
 				9CE3B220203B496800DB3302 /* Level3.sks */,
 				9CE3B22C203DF01000DB3302 /* Level4.sks */,
+				9CE3B232203EE8CD00DB3302 /* Level5.sks */,
+				9CE3B233203EE8CD00DB3302 /* Level6.sks */,
 				9CD7588820382B3C008EF045 /* Cat.sks */,
 				9C357E5E20383CAE0079617E /* CatCurls.sks */,
 				9C357E6020383D430079617E /* CatWakeUp.sks */,
@@ -255,9 +267,13 @@
 				9CD7586720376406008EF045 /* Level1.sks in Resources */,
 				9CD758852038260B008EF045 /* lose.mp3 in Resources */,
 				9CD7587220376406008EF045 /* Assets.xcassets in Resources */,
+				9CE3B234203EE8CD00DB3302 /* Level5.sks in Resources */,
 				9CE3B227203DE5A600DB3302 /* Level2.sks in Resources */,
+				9CE3B235203EE8CD00DB3302 /* Level6.sks in Resources */,
 				9CE3B221203B496800DB3302 /* Level3.sks in Resources */,
+				9CE3B231203EE88400DB3302 /* discolights-loop.mov in Resources */,
 				9C357E6120383D430079617E /* CatWakeUp.sks in Resources */,
+				9CE3B230203EE88400DB3302 /* disco-sound.m4a in Resources */,
 				9C357E5F20383CAE0079617E /* CatCurls.sks in Resources */,
 				9CD758842038260B008EF045 /* win.mp3 in Resources */,
 				9CD7587520376406008EF045 /* LaunchScreen.storyboard in Resources */,
