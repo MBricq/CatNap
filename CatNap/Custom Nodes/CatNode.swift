@@ -11,6 +11,7 @@ import SpriteKit
 class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
     static let kCatTappedNotification = "kCatTappedNotification"
+    private var isDoingTheDance = false
     
     func didMoveToScene() {
         // this shouldn't be necessary but there is a bug with the current version of XCode
@@ -27,6 +28,16 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
     func interact() {
         NotificationCenter.default.post(Notification(name: NSNotification.Name(CatNode.kCatTappedNotification)))
+        
+        if DiscoBallNode.isDiscoTime && !isDoingTheDance {
+            isDoingTheDance = true
+            
+            let move = SKAction.sequence([SKAction.moveBy(x: 80, y: 20, duration: 0.5), SKAction.wait(forDuration: 0.5), SKAction.moveBy(x: -30, y: 20, duration: 0.5)])
+            let dance = SKAction.repeat(move, count: 3)
+            parent?.run(dance, completion: {
+                self.isDoingTheDance = false
+            })
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
