@@ -67,18 +67,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         // search "bed" through all the nodes of the scene
-        bedNode = childNode(withName: "bed") as! BedNode
+        bedNode = childNode(withName: "bed") as? BedNode
         // search "cat_body" through all the nodes of the scene and their children
-        catNode = childNode(withName: "//cat_body") as! CatNode
+        catNode = childNode(withName: "//cat_body") as? CatNode
         hookBaseNode = childNode(withName: "hookBase") as? HookBaseNode
         
         // play the music
-        //SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
+        SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
     }
     
     override func didSimulatePhysics() {
-        if isTheScenePlayable && hookBaseNode?.isHooked == false {
-            if abs(catNode.parent!.zRotation) > CGFloat(45).degreesToRadians() {
+        if isTheScenePlayable && hookBaseNode?.isHooked != true {
+            if abs(catNode.parent!.zRotation) > CGFloat(35).degreesToRadians() {
                 lose()
             }
         }
@@ -114,15 +114,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(message)
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        print(currentLevel)
+        if currentLevel == 0 {
+            currentLevel = 1
+            newGame()
+        }
+    }
+    
     func newGame() {
-        let scene = GameScene.level(levelNum: currentLevel)
-        scene?.scaleMode = scaleMode
-        view?.presentScene(scene)
+        if currentLevel == 7 {
+            let scene = GameScene(fileNamed: "GameOver")
+            scene?.scaleMode = scaleMode
+            view?.presentScene(scene)
+        } else {
+            let scene = GameScene.level(levelNum: currentLevel)
+            scene?.scaleMode = scaleMode
+            view?.presentScene(scene)
+        }
     }
     
     func win() {
         
-        if currentLevel < 6 {
+        if currentLevel < 7 {
             currentLevel += 1
         }
         

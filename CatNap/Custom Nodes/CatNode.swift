@@ -62,6 +62,7 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     }
     
     private func curlAt(scenePoint: CGPoint, xChange: Bool, yChange: Bool) {
+        // remobe the cat from the reference
         parent?.physicsBody = nil
         for child in children {
             child.removeFromParent()
@@ -69,27 +70,31 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         texture = nil
         color = SKColor.clear
         
+        // add the catCurl in the reference
         let catCurl = SKSpriteNode(fileNamed: "CatCurls")?.childNode(withName: "cat_curl")
         catCurl?.move(toParent: self)
         catCurl?.position = CGPoint(x: -30, y: 100)
+        print(catCurl!.position)
         
         var locationPoint = convert(scenePoint, from: scene!)
+        print(locationPoint.y)
         locationPoint.y -= frame.size.height/3
+        print(frame.size.height/3)
         
         if (xChange && yChange) {
             run(SKAction.group([SKAction.move(to: locationPoint, duration: 0.66),
-                                SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5)
+                                SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.66)
                                 ])
             )
         } else if (!xChange && yChange) {
             run(SKAction.group([SKAction.moveTo(y: locationPoint.y, duration: 0.66),
-                                SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5)
-                ])
-            )
+                                SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.66)
+                                ])
+                , completion : {print(catCurl!.position)})
         } else if (xChange && !yChange) {
             run(SKAction.group([SKAction.moveTo(x: locationPoint.x, duration: 0.66),
                                 SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5)
-                ])
+                                ])
             )
         }
         // this shouldn't be necessary but there is a bug with the current version of XCode

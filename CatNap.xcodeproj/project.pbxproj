@@ -52,6 +52,7 @@
 		9CE3B239203F247900DB3302 /* LongWoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B238203F247900DB3302 /* LongWoodNode.swift */; };
 		9CE3B23B203F270D00DB3302 /* DiscoBallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B23A203F270D00DB3302 /* DiscoBallNode.swift */; };
 		9CE3B23D203F320700DB3302 /* HintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3B23C203F320700DB3302 /* HintNode.swift */; };
+		9CE3B241203F38FF00DB3302 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9CE3B240203F38FF00DB3302 /* GameOver.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		9CE3B238203F247900DB3302 /* LongWoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongWoodNode.swift; sourceTree = "<group>"; };
 		9CE3B23A203F270D00DB3302 /* DiscoBallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoBallNode.swift; sourceTree = "<group>"; };
 		9CE3B23C203F320700DB3302 /* HintNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintNode.swift; sourceTree = "<group>"; };
+		9CE3B240203F38FF00DB3302 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				9CE3B22C203DF01000DB3302 /* Level4.sks */,
 				9CE3B232203EE8CD00DB3302 /* Level5.sks */,
 				9CE3B233203EE8CD00DB3302 /* Level6.sks */,
+				9CE3B240203F38FF00DB3302 /* GameOver.sks */,
 				9CD7588820382B3C008EF045 /* Cat.sks */,
 				9C357E5E20383CAE0079617E /* CatCurls.sks */,
 				9C357E6020383D430079617E /* CatWakeUp.sks */,
@@ -280,6 +283,7 @@
 				9CD758852038260B008EF045 /* lose.mp3 in Resources */,
 				9CD7587220376406008EF045 /* Assets.xcassets in Resources */,
 				9CE3B234203EE8CD00DB3302 /* Level5.sks in Resources */,
+				9CE3B241203F38FF00DB3302 /* GameOver.sks in Resources */,
 				9CE3B227203DE5A600DB3302 /* Level2.sks in Resources */,
 				9CE3B235203EE8CD00DB3302 /* Level6.sks in Resources */,
 				9CE3B221203B496800DB3302 /* Level3.sks in Resources */,
